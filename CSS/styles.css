@@ -6,6 +6,7 @@
     --background-color: #fff;
     --text-color: #000;
     --accent-color: red;
+    --transparent: transparent;
 }
 
 .dark-mode{
@@ -116,3 +117,45 @@ button:hover::before {
 #no {
     transition: all .4s ease-in-out;
 }
+
+/* LETTER STYLES */
+main{
+    position: relative;
+}
+
+.envelope {
+    border-left: 300px solid var(--background-color);
+    border-bottom: 100px solid var(--background-color);
+    border-right: 300px solid var(--background-color);
+    border-top: 150px solid var(--transparent);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.letter {
+    position: absolute;
+    width: 550px;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    margin: 0 auto;
+    padding: 2rem;
+    bottom: 0;
+    left: 4.5%;
+    z-index: -1;
+    transition: all .8s ease-in-out;
+}
+
+.over-letter{
+    bottom: 60%;
+}
+
+.letter-stamp{
+    position: absolute;
+    z-index: 2;
+    transform: translateX(-10px) translateY(-10px);
+    width: 20px;
+    height: 20px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     <link type="image/icon-x" rel="icon" href="Assets/hearts.png">
     <link rel="stylesheet" href="./../CSS/styles.css">
 </head>
+
 <body class="dark-mode">
 
     <div class="overlay">
@@ -39,7 +41,15 @@
     </main>
 
     <!-- SCRIPTS -->
-    <script src="./../JS/supplementary.js" defer></script>
-    
+    <script defer>
+        // Can't wait button
+        const wait = document.getElementById("same").addEventListener("click", (e) => {
+            alert("Same! See you then bitch ❤️!");
+
+            window.location.href = './letter.html';
+        });
+    </script>
+
 </body>
+
 </html>

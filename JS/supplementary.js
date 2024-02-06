@@ -1,7 +1,11 @@
-// Can't wait button
-const wait = document.getElementById("same").addEventListener("click", (e) => {
-    alert("Same! See you then bitch ❤️!");
+// LETTER
+const envelope = document.querySelector('.envelope');
+const letter = document.querySelector('.letter');
 
-    window.location.href = './letter.html';
+envelope.addEventListener('mouseover', () => {
+    letter.classList.add('over-letter')
 });
 
+envelope.addEventListener('mouseout', () => {
+    letter.classList.remove('over-letter')
+});
