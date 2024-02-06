@@ -3,13 +3,13 @@
 // Scroll Reveal
 const scroll_reveal = ScrollReveal ({
     reset: true,
-    distance: '100px',
-    duration: 2000,
-    delay: 10
+    distance: '500px',
+    duration: 2500,
+    delay: 50
 });
 
 scroll_reveal.reveal('.name', {origin: 'top'});
-scroll_reveal.reveal('.home-content', {origin: 'left'});
+scroll_reveal.reveal('.gif', {origin: 'left'});
 scroll_reveal.reveal('.socials, .cv', {origin: 'right'});
 
 // Buttons
@@ -29,7 +29,7 @@ noButton.addEventListener('mouseover', (event) =>{
     const limitedY = Math.min(newY, maxAllowedY);
 
     // Set the new position
-    noButton.style.left = newX + 'px';
-    noButton.style.top = limitedY + 'px';
+    noButton.style.left = `${newX}px`;
+    noButton.style.top = `${limitedY}px`;
 
 })

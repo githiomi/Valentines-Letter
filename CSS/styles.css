@@ -35,7 +35,7 @@ body{
 
 .overlay {
     background-color: var(--background-color);
-    opacity: .2;
+    opacity: .3;
     position: absolute;
     top: 0;
     height: 0;
@@ -45,7 +45,7 @@ body{
 }
 
 .name{
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
 
     span {
@@ -54,7 +54,8 @@ body{
 }
 
 .question {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
     margin: 1rem 0;
 }
 
@@ -84,6 +85,7 @@ button {
     overflow: hidden;
     color: var(--text-color);
     font-weight: bold;
+    cursor: pointer;
 }
 
 button::before {
