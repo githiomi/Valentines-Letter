@@ -18,18 +18,24 @@ const yesButton = document.getElementById("yes")
 noButton.addEventListener('mouseover', () =>{
     const x = noButton.offsetLeft;
     const y = noButton.offsetTop
+    const height = document.documentElement.clientHeight
+    const width = document.documentElement.clientWidth;
+
+    console.log(height);
+    console.log(width);
 
     // Generate random positions
-    const newX = Math.floor(Math.random() * (window.innerWidth - x));
-    const newY = Math.floor(Math.random() * (window.innerHeight - y));
+    const newX = Math.floor(Math.random() * (width-(width/2) - x));
+    const newY = Math.floor(Math.random() * (height-(height/2) - y));
 
-    // Limit newY to the height of the HTML document
-    const maxAllowedY = document.documentElement.clientHeight - noButton.clientHeight;
-    const limitedY = Math.min(newY, maxAllowedY);
+    if (newX > width || newY > height){
+        newX = (newX / 2);
+        newY = (newY / 2);
+    }
 
     // Set the new position
-    noButton.style.left = `${newX}px`;
-    noButton.style.top = `${limitedY}px`;
+    noButton.style.left = `${newX - 300}px`;
+    noButton.style.top = `${newY - 300}px`;
 
 });
 
