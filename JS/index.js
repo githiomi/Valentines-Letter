@@ -21,8 +21,8 @@ noButton.addEventListener('mouseover', (event) =>{
     const y = noButton.offsetTop
 
     // Generate random positions
-    const newX = Math.floor(Math.random() * x);
-    const newY = Math.floor(Math.random() * y);
+    const newX = Math.floor(Math.random() * (window.innerWidth - (x)));
+    const newY = Math.floor(Math.random() * (window.innerHeight - y));
 
     // Limit newY to the height of the HTML document
     const maxAllowedY = document.documentElement.clientHeight - noButton.clientHeight;
