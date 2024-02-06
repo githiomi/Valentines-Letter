@@ -45,11 +45,15 @@ body{
 }
 
 .name{
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
 
     span {
         text-transform: uppercase;
+    }
+
+    .special {
+        text-decoration: underline;
     }
 }
 
@@ -86,6 +90,7 @@ button {
     color: var(--text-color);
     font-weight: bold;
     cursor: pointer;
+    font-size: 1rem;
 }
 
 button::before {

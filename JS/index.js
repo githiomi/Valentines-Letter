@@ -10,18 +10,19 @@ const scroll_reveal = ScrollReveal ({
 
 scroll_reveal.reveal('.name', {origin: 'top'});
 scroll_reveal.reveal('.gif', {origin: 'left'});
-scroll_reveal.reveal('.socials, .cv', {origin: 'right'});
+scroll_reveal.reveal('.question', {origin: 'right'});
+scroll_reveal.reveal('.buttons', {origin: 'bottom'});
 
 // Buttons
 const noButton = document.getElementById("no")
 const yesButton = document.getElementById("yes")
 
-noButton.addEventListener('mouseover', (event) =>{
+noButton.addEventListener('mouseover', () =>{
     const x = noButton.offsetLeft;
     const y = noButton.offsetTop
 
     // Generate random positions
-    const newX = Math.floor(Math.random() * (window.innerWidth - (x)));
+    const newX = Math.floor(Math.random() * (window.innerWidth - x));
     const newY = Math.floor(Math.random() * (window.innerHeight - y));
 
     // Limit newY to the height of the HTML document
@@ -32,4 +33,8 @@ noButton.addEventListener('mouseover', (event) =>{
     noButton.style.left = `${newX}px`;
     noButton.style.top = `${limitedY}px`;
 
-})
+});
+
+yesButton.addEventListener('click', (e) => {
+    window.location.href = './HTML/success.html';
+});
