@@ -1,5 +1,3 @@
-// Typewriter Effect
-
 // Scroll Reveal
 const scroll_reveal = ScrollReveal ({
     reset: true,

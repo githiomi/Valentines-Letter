@@ -4,3 +4,4 @@ const wait = document.getElementById("same").addEventListener("click", (e) => {
 
     window.location.href = './letter.html';
 });
+
