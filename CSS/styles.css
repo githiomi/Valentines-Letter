@@ -159,3 +159,20 @@ main{
     border-radius: 50%;
 }
 
+.gun-gif{
+    position: absolute;
+    display: none;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    p{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+.show {
+    display: block;
+}
+
