@@ -20,7 +20,7 @@ You can view the the website using the GitHub live pages.
 
 Contact me through any of the following:
 
-* Slack: danielgithiomi
+* LinkedIn: Daniel Githiomi
 * Email: danielgithiomi@gmail.com
 * Github: githiomi
 
