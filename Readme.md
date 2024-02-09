@@ -14,7 +14,7 @@
 
 You can view the the website using the GitHub live pages.
 
-* Link: [Dare Dreamer](https://githiomi.github.io/Valentines-Letter)
+* Link: [Valentine Letter](https://githiomi.github.io/Valentines-Letter)
 
 ## 📧 Support and contact details
 

@@ -12,6 +12,7 @@ scroll_reveal.reveal('.question', { origin: 'right' });
 scroll_reveal.reveal('.buttons', { origin: 'bottom' });
 
 // Buttons
+const threatText = document.getElementById('threat-text');
 const noButton = document.getElementById("no")
 const yesButton = document.getElementById("yes")
 const gif = document.getElementById("gif-src");
@@ -19,6 +20,7 @@ const gif = document.getElementById("gif-src");
 noButton.addEventListener('mouseover', () => {
     //Changing the GIF
     gif.src = './Assets/gun.gif';
+    threatText.style.display = 'block';
 
     const x = noButton.offsetLeft;
     const y = noButton.offsetTop
@@ -44,7 +46,8 @@ noButton.addEventListener('mouseover', () => {
 });
 
 yesButton.addEventListener('mouseover', () => {
-    gif.src = './Assets/happy-ghost.gif'
+    gif.src = './Assets/happy-ghost.gif';
+    threatText.style.display = 'none';
 });
 
 yesButton.addEventListener('click', (e) => {

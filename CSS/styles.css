@@ -124,6 +124,7 @@ main{
 }
 
 .envelope {
+    margin-top: 30%;
     border-left: 300px solid var(--background-color);
     border-bottom: 100px solid var(--background-color);
     border-right: 300px solid var(--background-color);
@@ -146,7 +147,7 @@ main{
 }
 
 .over-letter{
-    bottom: 60%;
+    bottom: 40%;
 }
 
 .letter-stamp{
@@ -175,4 +176,3 @@ main{
 .show {
     display: block;
 }
-
