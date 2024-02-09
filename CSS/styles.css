@@ -2,41 +2,42 @@
 @charset 'UTF-8';
 
 /* THEMING */
-:root{
+:root {
     --background-color: #fff;
     --text-color: #000;
     --accent-color: red;
     --transparent: transparent;
 }
 
-.dark-mode{
+.dark-mode {
     --background-color: #1E1E1E;
     --text-color: #fff;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body{
+body {
     background-color: var(--background-color);
     color: var(--text-color);
     min-height: 100vh;
     background-image: url('./../Assets/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     overflow: hidden;
 }
 
 .overlay {
     background-color: var(--background-color);
-    opacity: .3;
+    opacity: .35;
     position: absolute;
     top: 0;
     height: 0;
@@ -45,7 +46,7 @@ body{
     z-index: -1;
 }
 
-.name{
+.name {
     font-size: 2.5rem;
     font-weight: bold;
 
@@ -64,7 +65,7 @@ body{
     margin: 1rem 0;
 }
 
-.gif{
+.gif {
     margin: 1rem;
 
     img {
@@ -119,12 +120,11 @@ button:hover::before {
 }
 
 /* LETTER STYLES */
-main{
+main {
     position: relative;
 }
 
 .envelope {
-    margin-top: 30%;
     border-left: 300px solid var(--background-color);
     border-bottom: 100px solid var(--background-color);
     border-right: 300px solid var(--background-color);
@@ -139,18 +139,19 @@ main{
     background-color: var(--text-color);
     color: var(--background-color);
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 3rem 4.5rem;
     bottom: 0;
     left: 4.5%;
     z-index: -1;
+    font-size: .9rem;
     transition: all .8s ease-in-out;
 }
 
-.over-letter{
-    bottom: 40%;
+.over-letter {
+    bottom: 45%;
 }
 
-.letter-stamp{
+.letter-stamp {
     position: absolute;
     z-index: 2;
     transform: translateX(-10px) translateY(-10px);
@@ -160,14 +161,14 @@ main{
     border-radius: 50%;
 }
 
-.gun-gif{
+.gun-gif {
     position: absolute;
     display: none;
     top: 90%;
     left: 50%;
     transform: translateX(-50%);
 
-    p{
+    p {
         text-transform: uppercase;
         font-weight: bold;
     }
@@ -175,4 +176,62 @@ main{
 
 .show {
     display: block;
+}
+
+/* RESPONSIVENESS */
+@media all and (max-width:683px) {
+
+    .name {
+        font-size: 2rem;
+    }
+
+    .question {
+        font-size: 1.5rem;
+    }
+
+    .gif {
+        img {
+            width: 250px;
+        }
+    }
+
+    button {
+        font-size: .8rem;
+    }
+
+    .envelope {
+        border-left: 230px solid var(--background-color);
+        border-bottom: 80px solid var(--background-color);
+        border-right: 230px solid var(--background-color);
+        border-top: 130px solid var(--transparent);
+    }
+
+    .letter {
+        width: 420px;
+        font-size: .8rem;
+        padding: 1rem 2.5rem 4rem;
+    }
+
+    .letter-stamp{
+        width: 15px;
+        height: 15px;
+        transform: translate(-8px, -8px);
+    }
+
+    .gun-gif {
+        position: absolute;
+        /* display: none; */
+        top: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img {
+            width: 200px;
+        }
+    
+        p {
+            font-size: .8rem;
+        }
+    }
+
 }
